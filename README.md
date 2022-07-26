@@ -1,27 +1,20 @@
-# AdrianTurkFinalProject
+# FRONTEND Proyecto Integrador - Argentina Programa - Adrian Turk
+Repositorio utilizado para el Front End del portafolio Web para el proyecto integrador en el programa "#YoProgramo - Argentina Programa"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+# Objetivo
+    Desarrollar una aplicación web full stack, que mostrará:
+    - Datos personales
+    - Estudios cursados
+    - Experiencia laboral
+    - Conocimiento de las tecnologías 
+    Es decir, crear un propio portfolio web
+    Esta aplicación deberá ser de arquitectura distribuida:  
+    - Contener un diseño de interfaz de usuario (front end) que muestre la información
+    - Una base de datos que almacene los datos antes mencionados 
+    - Contar con las APIs necesarias para proveer a través de internet la información (back end).
+    La idea es que, además de servirte para aplicar lo aprendido y que te evaluemos, puedas publicar el portfolio web y usarlo como carta de presentación en el mercado laboral.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Tecnologias a emplear:
+    - JWT con Spring Boot y Angular
+    - MySQL
+    - JAVA + JPA
