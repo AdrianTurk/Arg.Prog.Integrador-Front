@@ -1,0 +1,9 @@
+
+img {
+    display: inline-block;
+
+    width: 40px;
+    padding: 10px;
+    filter: invert(100%) sepia(6%) saturate(610%) hue-rotate(29deg) brightness(121%) contrast(108%);  
+        /*filter from https://codepen.io/sosuke/pen/Pjoqqp*/
+}

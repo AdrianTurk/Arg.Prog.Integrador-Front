@@ -1,0 +1,29 @@
+.text-name{
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    
+} 
+
+* {
+    background-color: #e8fffc
+}
+
+
+#photo{
+    margin-top: -35%;
+    box-shadow: 10px 10px 10px grey;
+}
+
+
+@media(max-width:575px) {
+    #photo{
+        margin: 0 ;
+        margin-top: -7%;
+        width: 50vw;
+        align-items: center;
+    }
+     #photoContainer{
+        display: flex;
+        justify-content: center;
+    } 
+}

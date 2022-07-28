@@ -1,0 +1,14 @@
+.card-header{
+    background-color: #c0f6ef;
+}
+.card-body{
+    background-color: #e8fffc;
+}
+.card-footer{
+    background-color: #6ccef8;
+}
+.title{
+    text-align: center;
+    font-size: 5vh;
+    margin: 1em 1em 0
+}
