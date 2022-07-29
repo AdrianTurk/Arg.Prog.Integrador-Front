@@ -17,6 +17,7 @@ import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgCircleProgressModule.forRoot({
       backgroundOpacity: 1,
       backgroundStrokeWidth: 0,
