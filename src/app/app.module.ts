@@ -5,19 +5,21 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/main/header/header.component';
 
-import { LogoComponent } from './components/header/logo/logo.component';
+import { LogoComponent } from './components/main/header/logo/logo.component';
 
-import { LinksComponent } from './components/header/links/links.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { AboutMeComponent } from './components/about-me/about-me.component';
-import { ExperienceComponent } from './components/experience/experience.component';
-import { EducationComponent } from './components/education/education.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { ProjectsComponent } from './components/projects/projects.component';
+import { LinksComponent } from './components/main/header/links/links.component';
+import { BannerComponent } from './components/main/banner/banner.component';
+import { AboutMeComponent } from './components/main/about-me/about-me.component';
+import { ExperienceComponent } from './components/main/experience/experience.component';
+import { EducationComponent } from './components/main/education/education.component';
+import { SkillsComponent } from './components/main/skills/skills.component';
+import { ProjectsComponent } from './components/main/projects/projects.component';
 
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { MainComponent } from './components/main/main.component';
+import { LoginComponent } from './components/login/login.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {HttpClientModule} from '@angular/common/http'
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    MainComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
