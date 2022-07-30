@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/model/User.model';
-import { UserService } from 'src/app/service/user.service';
+import { UserData } from 'src/app/model/userData.model';
+import { UserDataService } from 'src/app/service/userData.service';
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  styleUrls: ['./about-me.component.css'],
 })
 export class AboutMeComponent implements OnInit {
-  user: User = new User()
-  
-  constructor(public userService: UserService) { }
+  user: UserData = new UserData('', '', '', '', '', '', '', '', '', '', '');
+
+  constructor(public userDataService: UserDataService) {}
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(data=>{this.user=data})
+    this.userDataService.getUserData().subscribe((data) => {
+      this.user = data;
+    });
   }
-
 }
