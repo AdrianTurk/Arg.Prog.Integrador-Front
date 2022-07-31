@@ -17,9 +17,10 @@ import { EducationComponent } from './components/main/education/education.compon
 import { SkillsComponent } from './components/main/skills/skills.component';
 import { ProjectsComponent } from './components/main/projects/projects.component';
 
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
-import { LoginComponent } from './components/login/login.component'
+import { LoginComponent } from './components/login/login.component';
+import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LoginComponent } from './components/login/login.component'
     SkillsComponent,
     ProjectsComponent,
     MainComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,16 +51,16 @@ import { LoginComponent } from './components/login/login.component'
       maxPercent: 100,
       outerStrokeGradient: true,
       outerStrokeWidth: 16,
-      outerStrokeColor: "blue",
-      outerStrokeGradientStopColor: "green",
-      innerStrokeColor: "green",
+      outerStrokeColor: 'blue',
+      outerStrokeGradientStopColor: 'green',
+      innerStrokeColor: 'green',
       innerStrokeWidth: 2,
-      titleFontSize: "30",
+      titleFontSize: '30',
       animationDuration: 1500,
-      showSubtitle: false
-    })
+      showSubtitle: false,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
