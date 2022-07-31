@@ -10,6 +10,7 @@ import { ExperienceService } from 'src/app/service/experience.service';
 })
 export class NewExperienceComponent implements OnInit {
   companyName: string = '';
+  jobPosition: string = '';
   details: string = '';
   period: string = '';
   recomendations: string = '';
@@ -24,6 +25,7 @@ export class NewExperienceComponent implements OnInit {
   onCreate(): void {
     const experience = new Experience(
       this.companyName,
+      this.jobPosition,
       this.period,
       this.details,
       this.recomendations
