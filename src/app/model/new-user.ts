@@ -2,18 +2,18 @@ export class NewUser {
     name:String
     email:String
     password:String
-    roles:String[]
+    authorities:String[]
 
 
   constructor(
     name: String, 
     email: String, 
     password: String, 
-    roles: String[]
+    authorities: String[]
     ) {
     this.name = name
     this.email = email
     this.password = password
-    this.roles = roles
+    this.authorities = authorities
   }
 }

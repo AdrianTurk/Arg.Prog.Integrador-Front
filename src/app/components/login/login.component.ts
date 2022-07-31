@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginUser!: LoginUser;
   userName!: string;
   password!: string;
-  roles: string[] = [];
+  authorities: string[] = [];
   errMsj!: string;
 
   constructor(
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
       this.isLogged = true;
-      this.roles = this.tokenService.getAuthorities();
+      this.authorities = this.tokenService.getAuthorities();
     }
   }
 
@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
         this.isLogged = true;
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.userName);
-        this.tokenService.setAutorities(data.roles);
-        this.roles = data.roles;
+        this.tokenService.setAuthorities(data.authorities);
+        this.authorities = data.authorities;
         this.router.navigate(['']);
       },
       (err) => {
