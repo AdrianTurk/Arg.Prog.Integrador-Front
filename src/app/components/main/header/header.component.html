@@ -3,19 +3,54 @@
     <app-links></app-links>
 </div> -->
 <div class="row g-0">
-    <div class="container d-flex align-items-center justify-content-between">
-        <div class="col-4">
-            <div class="logos">
-                <img  id="apLogo" class="img-fluid" src="../../../assets/logos/APLogo.png" alt="Logo iniciativa #YoProgramo - Argentina Programa">
-            </div>
-        </div>
-        <div class="col-8 d-flex justify-content-end 9-0 m-0 g-0">
-            <div class="links">
-                <a href="http://"><img class="img-fluid" src="../../../assets/logos/github.svg" alt="GitHub Logo"></a>
-                <a href="http://"><img class="img-fluid" src="../../../assets/logos/linkedin-in.svg" alt="Linkedin Logo"></a>
-                <a href="http://"><img class="img-fluid" src="../../../assets/logos/email.svg" alt="Linkedin Logo"></a>
-                <button type="button" class="btn btn-outline-light" (click)="login()">Log In</button>
-            </div>
-        </div>
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="col-4">
+      <div class="logos">
+        <img
+          id="apLogo"
+          class="img-fluid"
+          src="../../../assets/logos/APLogo.png"
+          alt="Logo iniciativa #YoProgramo - Argentina Programa"
+        />
+      </div>
     </div>
+    <div class="col-8 d-flex justify-content-end 9-0 m-0 g-0">
+      <div class="links">
+        <a href="http://"
+          ><img
+            class="img-fluid"
+            src="../../../assets/logos/github.svg"
+            alt="GitHub Logo"
+        /></a>
+        <a href="http://"
+          ><img
+            class="img-fluid"
+            src="../../../assets/logos/linkedin-in.svg"
+            alt="Linkedin Logo"
+        /></a>
+        <a href="http://"
+          ><img
+            class="img-fluid"
+            src="../../../assets/logos/email.svg"
+            alt="Linkedin Logo"
+        /></a>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          (click)="login()"
+          *ngIf="!isLogged"
+        >
+          Log In
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-light"
+          (click)="onLogout()"
+          *ngIf="isLogged"
+        >
+          Log Out
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

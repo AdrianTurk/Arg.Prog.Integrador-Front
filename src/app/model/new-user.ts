@@ -1,19 +1,18 @@
 export class NewUser {
-    name:String
-    email:String
-    password:String
-    authorities:String[]
-
+  name: string;
+  email: string;
+  password: string;
+  authorities: string[];
 
   constructor(
-    name: String, 
-    email: String, 
-    password: String, 
-    authorities: String[]
-    ) {
-    this.name = name
-    this.email = email
-    this.password = password
-    this.authorities = authorities
+    name: string,
+    email: string,
+    password: string,
+    authorities: string[]
+  ) {
+    this.name = name;
+    this.email = email;
+    this.password = password;
+    this.authorities = authorities;
   }
 }
