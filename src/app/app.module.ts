@@ -21,8 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
-import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/token.interceptor.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewExperienceComponent } from './components/new-experience/new-experience.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +40,14 @@ import { interceptorProvider } from './service/token.interceptor.service';
     MainComponent,
     LoginComponent,
     RegisterFormComponent,
+    NewExperienceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     NgCircleProgressModule.forRoot({
       backgroundOpacity: 1,
       backgroundStrokeWidth: 0,

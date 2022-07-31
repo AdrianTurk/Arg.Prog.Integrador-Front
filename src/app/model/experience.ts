@@ -3,17 +3,17 @@ export class Experience {
   companyName: string;
   period: string;
   details: string;
-  references: string;
+  recomendations: string;
 
   constructor(
     companyName: string,
     period: string,
     details: string,
-    references: string
+    recomendations: string
   ) {
     this.companyName = companyName;
     this.period = period;
     this.details = details;
-    this.references = references;
+    this.recomendations = recomendations;
   }
 }

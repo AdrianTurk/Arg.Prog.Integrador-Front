@@ -1,37 +1,37 @@
-<h1 class="title">Experiencia Laboral:</h1>
-<div class="container-fluid">
+<div class="row">
+  <h1 class="title">Experiencia Laboral:</h1>
+
+  <div class="col-xs-2">
+    <button
+      type="button"
+      class="btn btn-primary"
+      routerLink="newexperience"
+      *ngIf="isLogged"
+    >
+      Agregar
+    </button>
+  </div>
+
+  <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="card m-5">
-                <div class="card-header">
-                    <h4 class="card-title"> Empresa1 - 2000-2010</h4>
-                    <h5 class="card-title"> Cargo </h5>
-                </div>
-                
-                <div class="card-body">
-                
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, debitis est? Eveniet hic molestiae consequatur fugit cumque at voluptatem explicabo perferendis? Fugiat maxime incidunt alias sapiente dolorum aspernatur ipsam perspiciatis eius molestiae sit quaerat hic, ducimus quod fugit dolorem possimus minima, atque dignissimos at, facere amet quo repellendus excepturi nostrum. Impedit rem voluptas doloribus esse, veniam quam neque perspiciatis, ut ab non, officiis molestiae accusamus nostrum! Explicabo vitae illo voluptas harum odio cumque ullam ut voluptate! Atque at veniam iure labore velit, dolore dignissimos nostrum pariatur in placeat, laudantium doloribus architecto distinctio perferendis obcaecati incidunt? Necessitatibus, illo? Earum, magnam voluptatibus.</p>
+      <div class="col-12">
+        <div class="card m-5" *ngFor="let curExp of experience">
+          <div class="card-header">
+            <h4 class="card-title">
+              {{ curExp.companyName }} - {{ curExp.period }}
+            </h4>
+            <!-- TODO: -->
+            <h5 class="card-title">CARGO NOT IMPLMENTED</h5>
+          </div>
 
-                </div>
-                <div class="card-footer">
-                    <p class="carf-text">referencias: </p>
-                </div>
-            </div>
-            <div class="card m-5">
-                <div class="card-header">
-                    <h4 class="card-title"> Empresa2 - 2010-2020</h4>
-                    <h5 class="card-title"> Cargo </h5>
-                </div>
-                
-                <div class="card-body">
-                
-                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, debitis est? Eveniet hic molestiae consequatur fugit cumque at voluptatem explicabo perferendis? Fugiat maxime incidunt alias sapiente dolorum aspernatur ipsam perspiciatis eius molestiae sit quaerat hic, ducimus quod fugit dolorem possimus minima, atque dignissimos at, facere amet quo repellendus excepturi nostrum. Impedit rem voluptas doloribus esse, veniam quam neque perspiciatis, ut ab non, officiis molestiae accusamus nostrum! Explicabo vitae illo voluptas harum odio cumque ullam ut voluptate! Atque at veniam iure labore velit, dolore dignissimos nostrum pariatur in placeat, laudantium doloribus architecto distinctio perferendis obcaecati incidunt? Necessitatibus, illo? Earum, magnam voluptatibus.</p>
-
-                </div>
-                <div class="card-footer">
-
-                </div>
-            </div>
+          <div class="card-body">
+            <p class="card-text">{{ curExp.details }}</p>
+          </div>
+          <div class="card-footer" *ngIf="curExp.recomendations">
+            <p class="carf-text">referencias: {{ curExp.recomendations }}</p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
