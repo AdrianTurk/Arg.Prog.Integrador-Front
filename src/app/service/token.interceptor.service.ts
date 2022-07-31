@@ -1,7 +1,7 @@
-import { NgIfContext } from '@angular/common';
 import {
   HttpEvent,
   HttpHandler,
+  HttpInterceptor,
   HttpRequest,
   HTTP_INTERCEPTORS,
 } from '@angular/common/http';
@@ -12,15 +12,13 @@ import { TokenService } from './token.service';
 @Injectable({
   providedIn: 'root',
 })
-export class InterceptorService {
+export class TokenInterceptorService implements HttpInterceptor {
+  
   constructor(private tokenService: TokenService) {}
-
-  Intercept(
-    req: HttpRequest<any>,
-    next: HttpHandler
-  ): Observable<HttpEvent<any>> {
-    let intReq = req;
-    const token = this.tokenService.getToken();
+  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        let intReq = req;
+  
+        const token = this.tokenService.getToken();
     if (token != null) {
       intReq = req.clone({
         headers: req.headers.set('Authorization', 'Bearer' + token),
@@ -33,7 +31,7 @@ export class InterceptorService {
 export const interceptorProvider = [
   {
     provide: HTTP_INTERCEPTORS,
-    useClass: InterceptorService,
+    useClass: TokenInterceptorService,
     multi: true,
   },
 ];

@@ -22,7 +22,7 @@ import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { FormsModule } from '@angular/forms';
-import { interceptorProvider } from './service/interceptor.service';
+import { interceptorProvider } from './service/token.interceptor.service';
 
 @NgModule({
   declarations: [
