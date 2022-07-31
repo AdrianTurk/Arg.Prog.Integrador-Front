@@ -12,6 +12,6 @@ export class UserDataService {
   constructor(private http: HttpClient) {}
 
   public getUserData(): Observable<UserData> {
-    return this.http.get<UserData>(this.SERVER + '/user/user1');
+    return this.http.get<UserData>(this.SERVER + '/user/user2');
   }
 }

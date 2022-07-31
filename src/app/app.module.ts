@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { RegisterFormComponent } from './components/register-form/register-form.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({
       backgroundOpacity: 1,
       backgroundStrokeWidth: 0,

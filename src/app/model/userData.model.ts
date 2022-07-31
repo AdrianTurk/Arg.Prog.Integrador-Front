@@ -2,29 +2,29 @@ export class UserData {
   id?: number;
   userName: String;
   fullName: String;
-  photoUrl: String;
-  email: String;
-  phoneNumber: String;
-  location: String;
-  aboutMe: String;
-
+  
   jobPosition: String;
+  photoUrl: String;
+  aboutMe: String;
+  phoneNumber: String;
+  email: String;
   birthDate: String;
-  githubUrl: String;
   linkedinUrl: String;
+  githubUrl: String;
+  location: String;
 
   constructor(
     userName: String,
     fullName: String,
-    photoUrl: String,
-    email: String,
-    phoneNumber: String,
-    location: String,
-    aboutMe: String,
     jobPosition: String,
+    photoUrl: String,
+    aboutMe: String,
+    phoneNumber: String,
+    email: String,
     birthDate: String,
+    linkedinUrl: String,
     githubUrl: String,
-    linkedinUrl: String
+    location: String
   ) {
     this.userName = userName;
     this.fullName = fullName;
