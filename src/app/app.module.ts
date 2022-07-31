@@ -24,6 +24,7 @@ import { RegisterFormComponent } from './components/register-form/register-form.
 import { interceptorProvider } from './service/token.interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewExperienceComponent } from './components/new-experience/new-experience.component';
+import { FormExperienceComponent } from './components/form-experience/form-experience.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { NewExperienceComponent } from './components/new-experience/new-experien
     LoginComponent,
     RegisterFormComponent,
     NewExperienceComponent,
+    FormExperienceComponent,
   ],
   imports: [
     BrowserModule,

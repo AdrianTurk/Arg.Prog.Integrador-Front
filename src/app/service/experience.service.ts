@@ -16,9 +16,9 @@ export class ExperienceService {
     );
   }
 
-  public details(id: number): Observable<Experience> {
+  public detail(id: number): Observable<Experience> {
     return this.httpClient.get<Experience>(
-      this.EXPERIENCE_DATA_URL + '/details/' + id
+      this.EXPERIENCE_DATA_URL + `/detail/${id}`
     );
   }
 
@@ -31,14 +31,14 @@ export class ExperienceService {
 
   public update(id: number, data: Experience): Observable<any> {
     return this.httpClient.put<any>(
-      this.EXPERIENCE_DATA_URL + '/update/' + id,
+      this.EXPERIENCE_DATA_URL + `/update/${id}`,
       data
     );
   }
 
   public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(
-      this.EXPERIENCE_DATA_URL + '/delete/' + id
+      this.EXPERIENCE_DATA_URL + `/delete/${id}`
     );
   }
 }

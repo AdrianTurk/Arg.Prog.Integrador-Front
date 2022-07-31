@@ -4,11 +4,13 @@ import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { FormsModule } from '@angular/forms';
 import { NewExperienceComponent } from './components/new-experience/new-experience.component';
+import { FormExperienceComponent } from './components/form-experience/form-experience.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'login', component: LoginComponent },
   { path: 'newexperience', component: NewExperienceComponent },
+  { path: 'ChangeExperience/:id', component: FormExperienceComponent },
 ];
 
 @NgModule({

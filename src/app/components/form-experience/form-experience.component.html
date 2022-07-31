@@ -1,0 +1,59 @@
+<div class="container" *ngIf="entry">
+  <div class="row">
+    <div>
+      <form #f="ngForm" (ngSubmit)="onUpdate()" novalidate>
+        <div class="form-group">
+          <label for="companyName">Nombre de la empresa:</label>
+          <input
+            type="text"
+            name="companyName"
+            id="companyName"
+            class="form-control"
+            [(ngModel)]="entry.companyName"
+            required
+          />
+        </div>
+        <!-- <div class="form-group">
+                <label for="jobPosition">Puesto:</label> 
+                <input type="text" name="jobPosition" id="jobPosition" class="form-control" [(ngModel)]="jobPosition" required>
+              </div> -->
+
+        <div class="form-group">
+          <label for="period">Periodo:</label>
+          <input
+            type="text"
+            name="period"
+            id="period"
+            class="form-control"
+            [(ngModel)]="entry.period"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="details">Detalle:</label>
+          <input
+            type="text"
+            name="details"
+            id="details"
+            class="form-control"
+            [(ngModel)]="entry.details"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="recomendations">Referencias:</label>
+          <input
+            type="text"
+            name="recomendations"
+            id="recomendations"
+            class="form-control"
+            [(ngModel)]="entry.recomendations"
+            required
+          />
+        </div>
+        <input type="submit" class="btn btn-primary" value="Guardar" />
+      </form>
+    </div>
+  </div>
+</div>
