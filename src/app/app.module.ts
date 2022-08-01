@@ -24,6 +24,8 @@ import { interceptorProvider } from './service/token.interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewExperienceComponent } from './components/new-experience/new-experience.component';
 import { FormExperienceComponent } from './components/form-experience/form-experience.component';
+import { FormEducationComponent } from './components/form-education/form-education.component';
+import { NewEducationComponent } from './components/new-education/new-education.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { FormExperienceComponent } from './components/form-experience/form-exper
     LoginComponent,
     NewExperienceComponent,
     FormExperienceComponent,
+    FormEducationComponent,
+    NewEducationComponent,
   ],
   imports: [
     BrowserModule,
