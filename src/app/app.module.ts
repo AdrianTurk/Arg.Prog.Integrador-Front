@@ -20,7 +20,6 @@ import { ProjectsComponent } from './components/main/projects/projects.component
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { interceptorProvider } from './service/token.interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewExperienceComponent } from './components/new-experience/new-experience.component';
@@ -40,7 +39,6 @@ import { FormExperienceComponent } from './components/form-experience/form-exper
     ProjectsComponent,
     MainComponent,
     LoginComponent,
-    RegisterFormComponent,
     NewExperienceComponent,
     FormExperienceComponent,
   ],
