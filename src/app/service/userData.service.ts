@@ -7,7 +7,7 @@ import { UserData } from '../model/UserData.model';
   providedIn: 'root',
 })
 export class UserDataService {
-  SERVER = 'http://localhost:8080';
+  SERVER = 'https://still-spire-19033.herokuapp.com/';
 
   constructor(private http: HttpClient) {}
 

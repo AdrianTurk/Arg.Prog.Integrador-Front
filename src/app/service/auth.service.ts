@@ -9,7 +9,7 @@ import { NewUser } from '../model/new-user';
   providedIn: 'root',
 })
 export class AuthService {
-  AUTH_URL = 'http://localhost:8080/auth';
+  AUTH_URL = 'https://still-spire-19033.herokuapp.com/auth';
   constructor(private httpClient: HttpClient) {}
 
   public newUser(newUser: NewUser): Observable<any> {
