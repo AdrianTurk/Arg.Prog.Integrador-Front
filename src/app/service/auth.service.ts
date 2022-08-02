@@ -9,7 +9,11 @@ import { NewUser } from '../model/new-user';
   providedIn: 'root',
 })
 export class AuthService {
-  AUTH_URL = 'https://still-spire-19033.herokuapp.com/auth';
+  AUTH_URL = 'https://still-spire-19033.herokuapp.com/auth'
+  
+  //No soportado en firebase free:
+  //AUTH_URL = `${process.env['BACKEND_URL']}/auth`
+
   constructor(private httpClient: HttpClient) {}
 
   public newUser(newUser: NewUser): Observable<any> {

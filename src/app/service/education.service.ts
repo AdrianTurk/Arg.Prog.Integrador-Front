@@ -7,7 +7,10 @@ import { Education } from '../model/education';
   providedIn: 'root',
 })
 export class EducationService {
+  
   EDUCATION_DATA_URL = 'https://still-spire-19033.herokuapp.com/education';
+  //Not suported in firebase free
+  //EDUCATION_DATA_URL = `${process.env['BACKEND_URL']}/education`;
 
   constructor(private httpClient: HttpClient) {}
   public list(): Observable<Education[]> {

@@ -7,7 +7,10 @@ import { Experience } from '../model/experience';
   providedIn: 'root',
 })
 export class ExperienceService {
+  
   EXPERIENCE_DATA_URL = 'https://still-spire-19033.herokuapp.com/experience';
+  //Not suported in firebase free
+  //EXPERIENCE_DATA_URL = `${process.env['BACKEND_URL']}/experience`;
 
   constructor(private httpClient: HttpClient) {}
   public list(): Observable<Experience[]> {
