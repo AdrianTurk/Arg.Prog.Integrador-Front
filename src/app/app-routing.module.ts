@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'login', component: LoginComponent },
   { path: 'newExperience', component: NewExperienceComponent },
-  { path: 'changeExperience/:id', component: FormExperienceComponent },
+  { path: 'cangeExperience/:id', component: FormExperienceComponent },
   { path: 'newEducation', component: NewEducationComponent },
   { path: 'changeEducation/:id', component: FormEducationComponent },
   
