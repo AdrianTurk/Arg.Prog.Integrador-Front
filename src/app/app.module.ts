@@ -7,9 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/main/header/header.component';
 
-import { LogoComponent } from './components/main/header/logo/logo.component';
-
-import { LinksComponent } from './components/main/header/links/links.component';
 import { BannerComponent } from './components/main/banner/banner.component';
 import { AboutMeComponent } from './components/main/about-me/about-me.component';
 import { ExperienceComponent } from './components/main/experience/experience.component';
@@ -31,8 +28,6 @@ import { NewEducationComponent } from './components/new-education/new-education.
   declarations: [
     AppComponent,
     HeaderComponent,
-    LogoComponent,
-    LinksComponent,
     BannerComponent,
     AboutMeComponent,
     ExperienceComponent,
