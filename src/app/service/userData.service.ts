@@ -8,7 +8,7 @@ import { UserData } from '../model/UserData.model';
 })
 export class UserDataService {
   
-  SERVER = 'https://still-spire-19033.herokuapp.com';
+  SERVER = 'http://still-spire-19033.herokuapp.com';
   
   //Not suported in firebase free
   //SERVER = `${process.env['BACKEND_URL']}`;

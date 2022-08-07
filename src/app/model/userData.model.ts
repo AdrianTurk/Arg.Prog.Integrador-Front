@@ -9,8 +9,8 @@ export class UserData {
   phoneNumber: string;
   email: string;
   birthDate: string;
-  linkedinUrl: string;
-  githubUrl: string;
+  linkedInUrl: string;
+  gitHubUrl: string;
   location: string;
 
   constructor(
@@ -35,7 +35,7 @@ export class UserData {
     this.aboutMe = aboutMe;
     this.jobPosition = jobPosition;
     this.birthDate = birthDate;
-    this.githubUrl = githubUrl;
-    this.linkedinUrl = linkedinUrl;
+    this.gitHubUrl = githubUrl;
+    this.linkedInUrl = linkedinUrl;
   }
 }

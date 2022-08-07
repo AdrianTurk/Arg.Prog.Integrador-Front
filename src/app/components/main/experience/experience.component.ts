@@ -9,12 +9,12 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./experience.component.css'],
 })
 export class ExperienceComponent implements OnInit {
+  isLogged = false;
   experience: Experience[] = [];
   constructor(
     private experienceService: ExperienceService,
     private tokenService: TokenService
   ) {}
-  isLogged = false;
 
   ngOnInit(): void {
     this.loadExperience();
