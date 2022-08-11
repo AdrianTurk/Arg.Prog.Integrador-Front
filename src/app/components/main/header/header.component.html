@@ -2,38 +2,45 @@
     <app-logo></app-logo>
     <app-links></app-links>
 </div> -->
-<div class="row g-0">
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="col-4">
-      <div class="logos">
-        <img
-          id="apLogo"
-          class="img-fluid"
-          src="../../../assets/logos/APLogo.png"
-          alt="Logo iniciativa #YoProgramo - Argentina Programa"
-        />
-      </div>
-    </div>
-    <div class="col-8 d-flex justify-content-end 9-0 m-0 g-0">
-      <div class="links">
-        <a href="//{{user.gitHubUrl}}"
+
+<nav class="navbar navbar-expand-lg navbar-light m-0 p-0 align-space-between">
+  <a class="col navbar-brand m-0 p-0">
+    <img
+      id="apLogo"
+      class="img-fluid"
+      src="../../../assets/logos/APLogo.png"
+      alt="Logo iniciativa #YoProgramo - Argentina Programa"
+    />
+  </a>
+  <div class="col">
+    <ul class="navbar-nav flex-row justify-content-end align-items-center m-2 p-2">
+      <li class="nav-item active">
+        <a class="nav-link" href="//{{ user.gitHubUrl }}"
           ><img
-            class="img-fluid"
-            src="../../../assets/logos/github.svg"
+            class="img"
+            src="../../../../assets/logos/github.svg"
             alt="GitHub Logo"
-        /></a>
-        <a href="//{{user.linkedInUrl}}"
+          />
+          <!-- <span class="sr-only">GitHub</span> -->
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="//{{ user.linkedInUrl }}"
           ><img
-            class="img-fluid"
-            src="../../../assets/logos/linkedin-in.svg"
+            class="img"
+            src="../../../../assets/logos/linkedin-in.svg"
             alt="Linkedin Logo"
         /></a>
-        <a href="mailto://{{user.email}}"
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mailto://{{ user.email }}"
           ><img
             class="img-fluid"
-            src="../../../assets/logos/email.svg"
-            alt="Linkedin Logo"
+            src="../../../../assets/logos/email.svg"
+            alt="Email Logo"
         /></a>
+      </li>
+      <li class="nav-item">
         <button
           type="button"
           class="btn btn-outline-light"
@@ -42,6 +49,8 @@
         >
           Log In
         </button>
+      </li>
+      <li class="nav-item">
         <button
           type="button"
           class="btn btn-outline-light"
@@ -50,7 +59,24 @@
         >
           Log Out
         </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 
+
+<div class="row g-0">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="col-4">
+      <div class="logos">
+       
+      </div>
+    </div>
+    <div class="col-8 d-flex justify-content-end 9-0 m-0 g-0">
+      <div class="links">
+
       </div>
     </div>
   </div>
-</div>
+</div> -->

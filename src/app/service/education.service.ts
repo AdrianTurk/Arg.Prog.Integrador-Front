@@ -8,7 +8,7 @@ import { Education } from '../model/education';
 })
 export class EducationService {
   
-  EDUCATION_DATA_URL = 'http://still-spire-19033.herokuapp.com/education';
+  EDUCATION_DATA_URL = 'https://still-spire-19033.herokuapp.com/education';
   //Not suported in firebase free
   //EDUCATION_DATA_URL = `${process.env['BACKEND_URL']}/education`;
 
