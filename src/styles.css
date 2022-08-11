@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.default-text-color{
+    color: #bde6e8;
+}
+.default-bg-color{
+    background-color: #04022e;
+}
