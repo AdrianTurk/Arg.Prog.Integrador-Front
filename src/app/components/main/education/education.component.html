@@ -1,58 +1,54 @@
 <div class="default-bg-color">
-  <div class="row pt-5 g-0">
+  <div class="row pt-3 g-0">
     <h1 class="title default-text-color g-0">Educacion:</h1>
   </div>
-  <div class="container mt-5">
+  <div class="container">
     <div class="row">
-      <div class="card-group">
-        <div class="col-6 d-flex"  *ngFor="let curEdu of education">
-          <div class="card m-3 ">
-            <div class="default-bg-color">
-              <div class="card details p-3">
-                <div class="row justify-content-between">
-                  <div class="col-8 justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                      <div class="c-details m-2">
-                        <h6>{{ curEdu.entityName }}</h6>
-                        <span>{{ curEdu.title }}</span
-                        ><br />
-                        <span>({{ curEdu.details }})</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div
-                      class="row nav nav-pills card-header-pills justify-content-end"
-                      *ngIf="isLogged"
-                    >
-                      <div
-                        class="btn"
-                        routerLink="/changeExperience/{{ curEdu.id }}"
-                      >
-                        <i class="bi bi-pencil-square"></i>
-                      </div>
-
-                      <div class="btn" (click)="deleteEducation(curEdu.id)">
-                        <i class="bi bi-trash3"></i>
-                      </div>
-                    </div>
+      <div class="col-6 d-flex" *ngFor="let curEdu of education">
+        <div class="card d-flex default-bg-color my-4 mx-2 p-0 w-100">
+          <div class="card card-body details p-0">
+            <div class="row justify-content-between p-2">
+              <div class="col-8 justify-content-between">
+                <div class="d-flex flex-row align-items-center">
+                  <div class="c-details m-2">
+                    <h6>{{ curEdu.entityName }}</h6>
+                    <span>{{ curEdu.title }}</span>
                   </div>
                 </div>
-                <div class="card-body px-4">
-                  <p class="d-flex text-justify">{{ curEdu.details }}</p>
+              </div>
+              <div class="col-1 m-0 p-1 g-0">
+                <div
+                  class="nav nav-pills card-header-pills d-flex align-items-center"
+                  *ngIf="isLogged"
+                >
+                  <div
+                    class="btn p-1"
+                    routerLink="/changeExperience/{{ curEdu.id }}"
+                  >
+                    <i class="bi bi-pencil-square"></i>
+                  </div>
+
+                  <div class="btn p-1" (click)="deleteEducation(curEdu.id)">
+                    <i class="bi bi-trash3"></i>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="row px-4">
+              <p class="d-flex text-justify">{{ curEdu.details }}</p>
+            </div>
           </div>
         </div>
-        <div class="col d-flex align-items-stretch align-items-center justify-content-center">
+      </div>
+      <div class="col-6 d-flex">
+        <div class="card d-flex bg-transparent my-4 mx-2 p-0 w-100">
           <button
             type="button"
             class="btn btn-ligth"
             routerLink="newExperience"
             *ngIf="isLogged"
-            style="color:aliceblue"
-                    >
+            style="color: aliceblue"
+          >
             <h2><i class="bi bi-plus-circle"></i></h2>
           </button>
         </div>
