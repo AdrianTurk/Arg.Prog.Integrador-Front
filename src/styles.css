@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-.default-text-color{
-    color: #bde6e8;
+.default-text-color {
+  color: #bde6e8;
 }
-.default-bg-color{
-    background-color: #04022e;
+.default-bg-color {
+  background-color: #04022e;
+}
+
+.card-footer-bg {
+  background-color:rgba(52, 63, 212, 0.543) !important;
+}
+
+.card-footer-text {
+  color: #fcfbff;
+}
+
+.title {
+  text-align: center;
+  font-size: 5vh;
 }
