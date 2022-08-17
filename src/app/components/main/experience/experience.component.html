@@ -1,55 +1,67 @@
-<div class="row">
-  <div class="container-fluid">
-    <div class="1 text-center"></div>
-    <div class="col-1 float-right"></div>
+<div class="default-bg-color">
+  <div class="row pt-5">
+    <h1 class="title default-text-color">Experiencia Laboral:</h1>
   </div>
-</div>
+  <div class="container mt-5 mb-3">
+    <div class="row">
+      <div class="card-group">
+        <div class="col-6 d-flex"  *ngFor="let curExp of experience">
+          <div class="card m-3 ">
+            <div class="default-bg-color">
+              <div class="card details p-3">
+                <div class="row justify-content-between">
+                  <div class="col-8 justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                      <div class="c-details m-2">
+                        <h6>{{ curExp.companyName }}</h6>
+                        <span>{{ curExp.jobPosition }}</span
+                        ><br />
+                        <span>({{ curExp.period }})</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-1">
+                    <div
+                      class="row nav nav-pills card-header-pills justify-content-end"
+                      *ngIf="isLogged"
+                    >
+                      <div
+                        class="btn"
+                        routerLink="/changeExperience/{{ curExp.id }}"
+                      >
+                        <i class="bi bi-pencil-square"></i>
+                      </div>
 
-<div class="container">
-  <h1 class="title">Experiencia Laboral:</h1>
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <button
-      type="button"
-      class="btn btn-ligth pull-left"
-      routerLink="newExperience"
-      *ngIf="isLogged"
-    >
-      <h2><i class="bi bi-plus-circle"></i></h2>
-    </button>
-  </div>
-</div>
-
-<div class="row">
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div class="card m-5" *ngFor="let curExp of experience">
-          <div class="card-header">
-            <div
-              class="nav nav-pills card-header-pills d-flex justify-content-end"
-              *ngIf="isLogged"
-            >
-              <div class="btn" routerLink="/cangeExperience/{{ curExp.id }}">
-                <i class="bi bi-pencil-square"></i>
+                      <div class="btn" (click)="deleteExperience(curExp.id)">
+                        <i class="bi bi-trash3"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body px-4">
+                  <p class="d-flex text-justify">{{ curExp.details }}</p>
+                </div>
               </div>
-
-              <div class="btn" (click)="deleteExperience(curExp.id)">
-                <i class="bi bi-trash3"></i>
+              <div class="card-footer py-0 align-self-end"
+                *ngIf="curExp.recomendations"
+              >
+                <p class="card-footer-text p-0 m-0">
+                  Referencias: {{ curExp.recomendations }}
+                </p>
               </div>
             </div>
-            <h4 class="card-title">
-              {{ curExp.companyName }} - {{ curExp.period }}
-            </h4>
-            <!-- TODO: -->
-            <h5 class="card-title">{{ curExp.jobPosition }}</h5>
           </div>
-
-          <div class="card-body">
-            <p class="card-text">{{ curExp.details }}</p>
-          </div>
-          <div class="card-footer" *ngIf="curExp.recomendations">
-            <p class="carf-text">referencias: {{ curExp.recomendations }}</p>
-          </div>
+        </div>
+        <div class="col d-flex align-items-stretch align-items-center justify-content-center">
+          <button
+            type="button"
+            class="btn btn-ligth"
+            routerLink="newExperience"
+            *ngIf="isLogged"
+            style="color:aliceblue"
+                    >
+            <h2><i class="bi bi-plus-circle"></i></h2>
+          </button>
         </div>
       </div>
     </div>

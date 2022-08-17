@@ -1,14 +1,16 @@
-.card-header{
-    background-color: #c0f6ef;
+
+.card-header {
+  background-color: #c0f6ef;
 }
-.card-body{
-    background-color: #e8fffc;
+
+.card-footer {
+  background-color: #a8ba82;
 }
-.card-footer{
-    background-color: #6ccef8;
+.card-footer-text {
+  color: #e8eff1;
 }
-.title{
-    text-align: center;
-    font-size: 5vh;
-    margin: 1em 1em 0
+
+.title {
+  text-align: center;
+  font-size: 5vh;
 }
