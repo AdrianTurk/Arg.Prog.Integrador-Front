@@ -17,13 +17,12 @@
                 </div>
               </div>
               <div class="col-1 m-0 p-1 g-0">
-                <div
+                <div *ngIf="isLogged"
                   class="nav nav-pills card-header-pills d-flex align-items-center"
-                  *ngIf="isLogged"
                 >
                   <div
                     class="btn p-1"
-                    routerLink="/changeExperience/{{ curEdu.id }}"
+                    routerLink="/changeEducation/{{ curEdu.id }}"
                   >
                     <i class="bi bi-pencil-square"></i>
                   </div>
@@ -35,7 +34,7 @@
               </div>
             </div>
             <div class="row px-4">
-              <p class="d-flex text-justify">{{ curEdu.details }}</p>
+              <p class="d-flex text-justify text-multiline">{{ curEdu.details }}</p>
             </div>
           </div>
         </div>
@@ -45,7 +44,7 @@
           <button
             type="button"
             class="btn btn-ligth"
-            routerLink="newExperience"
+            routerLink="newEducation"
             style="color: white"
           >
             <h2><i class="bi bi-plus-circle"></i></h2>
