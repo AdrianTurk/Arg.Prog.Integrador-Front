@@ -6,9 +6,9 @@
     <div class="row">
       <div class="col-6 d-flex" *ngFor="let curExp of experience">
         <div class="card d-flex default-bg-color my-4 mx-2 p-0 w-100">
-          <div class="card card-body details p-0 d-flex align-items-stretch">
-            <div class="row justify-content-between p-2">
-              <div class="col-8 justify-content-between">
+          <div class="card-header p-0 m-0">
+            <div class="row justify-content-between px-2 py-1 m-0">
+              <div class="col-11 justify-content-between">
                 <div class="d-flex flex-row align-items-center">
                   <div class="c-details m-2">
                     <h6>{{ curExp.companyName }}</h6>
@@ -35,17 +35,21 @@
                 </div>
               </div>
             </div>
-            <div class="row px-5">
-              <p class="d-flex text-justify text-multiline">{{ curExp.details }}</p>
-            </div>
-            <div
-              class="card-footer card-footer-bg m-0 g-0 py-0 h-100"
-              *ngIf="curExp.recomendations"
-            >
-              <p class="card-footer-text p-0 m-0 text-multiline">
-                Referencias: {{ curExp.recomendations }}
+          </div>
+          <div class="card-body details d-flex align-items-center">
+            <div class="row px-5 py-2">
+              <p class="d-flex text-justify text-multiline">
+                {{ curExp.details }}
               </p>
             </div>
+          </div>
+          <div
+            class="card-footer card-footer-bg m-0 g-0 py-0"
+            *ngIf="curExp.recomendations"
+          >
+            <p class="card-footer-text p-0 m-0 text-multiline">
+              Referencias: {{ curExp.recomendations }}
+            </p>
           </div>
         </div>
       </div>
