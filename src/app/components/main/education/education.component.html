@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-6 d-flex" *ngFor="let curEdu of education">
         <div class="card d-flex default-bg-color my-4 mx-2 p-0 w-100">
-          <div class="card card-body details p-0">
+          <div class="card-body details p-0">
             <div class="row justify-content-between p-2">
               <div class="col-8 justify-content-between">
                 <div class="d-flex flex-row align-items-center">
@@ -17,7 +17,8 @@
                 </div>
               </div>
               <div class="col-1 m-0 p-1 g-0">
-                <div *ngIf="isLogged"
+                <div
+                  *ngIf="isLogged"
                   class="nav nav-pills card-header-pills d-flex align-items-center"
                 >
                   <div
@@ -34,21 +35,25 @@
               </div>
             </div>
             <div class="row px-4">
-              <p class="d-flex text-justify text-multiline">{{ curEdu.details }}</p>
+              <p class="d-flex text-justify text-multiline">
+                {{ curEdu.details }}
+              </p>
             </div>
           </div>
         </div>
       </div>
       <div class="col-6 d-flex" *ngIf="isLogged">
         <div class="card d-flex bg-transparent mt-4 mx-2 p-0 w-100">
-          <button
-            type="button"
-            class="btn btn-ligth"
-            routerLink="newEducation"
-            style="color: white"
-          >
-            <h2><i class="bi bi-plus-circle"></i></h2>
-          </button>
+          <div class="card-body details p-0">
+            <button
+              type="button"
+              class="btn btn-ligth w-100 h-100"
+              routerLink="newEducation"
+              style="color: white"
+            >
+              <h2><i class="bi bi-plus-circle"></i></h2>
+            </button>
+          </div>
         </div>
       </div>
     </div>
