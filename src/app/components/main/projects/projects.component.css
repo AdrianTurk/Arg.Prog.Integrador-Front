@@ -1,18 +1,9 @@
-/* .card-header{
-    background-color: #c0f6ef;
-}
-.card-body{
-    background-color: #e8fffc;
-}
-.card-footer{
-    background-color: #6ccef8;
-} */
 .card-title{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 4em;
+    font-size: 3em;
 }
 .card-text{
-    font-size: 2em;
+    font-size: 1em;
 }
 .card-img{
     width: 20vw;

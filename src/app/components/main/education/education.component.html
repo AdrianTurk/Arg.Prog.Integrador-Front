@@ -40,14 +40,13 @@
           </div>
         </div>
       </div>
-      <div class="col-6 d-flex">
-        <div class="card d-flex bg-transparent my-4 mx-2 p-0 w-100">
+      <div class="col-6 d-flex" *ngIf="isLogged">
+        <div class="card d-flex bg-transparent mt-4 mx-2 p-0 w-100">
           <button
             type="button"
             class="btn btn-ligth"
             routerLink="newExperience"
-            *ngIf="isLogged"
-            style="color: aliceblue"
+            style="color: white"
           >
             <h2><i class="bi bi-plus-circle"></i></h2>
           </button>
