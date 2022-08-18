@@ -36,13 +36,13 @@
               </div>
             </div>
             <div class="row px-5">
-              <p class="d-flex text-justify">{{ curExp.details }}</p>
+              <p class="d-flex text-justify text-multiline">{{ curExp.details }}</p>
             </div>
             <div
               class="card-footer card-footer-bg m-0 g-0 py-0 h-100"
               *ngIf="curExp.recomendations"
             >
-              <p class="card-footer-text p-0 m-0">
+              <p class="card-footer-text p-0 m-0 text-multiline">
                 Referencias: {{ curExp.recomendations }}
               </p>
             </div>
