@@ -1,12 +1,36 @@
 <div class="default-bg-color p-0 m-0 g-0">
-  <div class="row pt-3 g-0">
+  <div class="row g-0">
     <h1 class="title default-text-color g-0">Skills:</h1>
   </div>
-  <div class="container p-3 d-flex justify-items-center default-bg-color">
-    <div class="row m-0 p-0 g-0">
-      <div class="col-3">
-        <circle-progress [percent]="50" [radius]="100"></circle-progress>
-      </div>
+  <div
+    class="container p-3 d-flex align-items-center justify-content-center justify-items-center default-bg-color"
+  >
+    <div
+      class="col-3 d-flex justify-content-center"
+      *ngFor="let curSkill of skills"
+    >
+      <circle-progress
+        title="{{ curSkill.name }}"
+        [radius]="100"
+        [showUnits]="false"
+        [percent]="curSkill.value"
+        [responsive]="true"
+      >
+      </circle-progress>
+    </div>
+    <div
+      class="col-3 d-flex justify-content-center align-items-center align-self-stretch"
+      *ngIf="isLogged"
+    >
+      <button
+        type="button"
+        class="btn btn-ligth addSkill"
+        routerLink="newSkill"
+        *ngIf="isLogged"
+        style="color: white"
+      >
+        <h2><i class="bi bi-plus-circle"></i></h2>
+      </button>
     </div>
   </div>
 </div>
