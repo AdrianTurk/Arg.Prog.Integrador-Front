@@ -2,25 +2,24 @@
   <div class="row d-flex justify-items-center">
     <div class="row pt-3">
       <div class="col">
-        <h1 class="title default-text-color m-0 p-0 g-0  mb-2">Proyectos:</h1>
+        <h1 class="title default-text-color m-0 p-0 g-0 mb-2">Proyectos:</h1>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div class="col-8">
+      <div class="col-8" *ngFor="let curPrj of projects">
         <div class="card d-flex mt-4 mx-2 p-0 w-100">
           <div class="row m-0 p-0 g-0">
             <div class="col-3 d-flex">
-              <img class="card-img img-fluid"
-                src="../../../assets/logos/email.svg"
+              <img
+                class="card-img img-fluid"
+                src="{{curPrj.imgLink}}"
               />
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8" >
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">{{curPrj.name}}</h5>
                 <p class="card-text">
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  {{curPrj.description}}
                 </p>
                 <p class="card-text">
                   <small class="text-muted">Last updated 3 mins ago</small>
@@ -29,8 +28,10 @@
             </div>
           </div>
         </div>
-        <div  class="card d-flex bg-transparent mt-4 mx-2 p-0 w-100">
-          <!-- TODO *ngIf="isLogged" -->
+        <div
+          *ngIf="isLogged"
+          class="card d-flex bg-transparent mt-4 mx-2 p-0 w-100"
+        >
           <button
             type="button"
             class="btn btn-ligth"
