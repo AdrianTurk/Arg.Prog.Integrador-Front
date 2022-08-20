@@ -12,7 +12,7 @@ import { AboutMeComponent } from './components/main/about-me/about-me.component'
 import { ExperienceComponent } from './components/main/experience/experience.component';
 import { EducationComponent } from './components/main/education/education.component';
 import { SkillsComponent } from './components/main/skills/skills.component';
-import { ProjectsComponent } from './components/main/projects/projects.component';
+import { ProjectComponent } from './components/main/project/project.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
@@ -33,7 +33,7 @@ import { NewEducationComponent } from './components/new-education/new-education.
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
-    ProjectsComponent,
+    ProjectComponent,
     MainComponent,
     LoginComponent,
     NewExperienceComponent,
