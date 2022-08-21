@@ -10,7 +10,8 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ExperienceComponent implements OnInit {
   isLogged = false;
-  experience: Experience[] = [];
+  experiences: Experience[] = [];
+  newExp: Experience;
   constructor(
     private experienceService: ExperienceService,
     private tokenService: TokenService
@@ -23,7 +24,7 @@ export class ExperienceComponent implements OnInit {
 
   loadExperience(): void {
     this.experienceService.list().subscribe((data) => {
-      this.experience = data;
+      this.experiences = data;
     });
   }
 
@@ -38,5 +39,20 @@ export class ExperienceComponent implements OnInit {
         }
       );
     }
+  }
+  addExperience() {
+    this.experiences.push(
+      new Experience(
+        'Nombre de la Empresa',
+        'Puesto',
+        'Periodo',
+        'Detalles de la experiencia',
+        'Recomendaciones'
+      )
+    );
+  }
+  updateExperience(id: number, data: Experience) {
+    if (id) this.experienceService.update(id, data).subscribe();
+    else this.experienceService.save(data).subscribe();
   }
 }
