@@ -10,52 +10,54 @@
           <div class="card-body details p-0">
             <div class="row justify-content-between p-2">
               <div class="col-11 justify-content-between">
-                <div class="row">
-                  <div class="row card-title m-0 p-0">
-                    <h4 class="m-0">
-                      <app-edit-input
-                        [data]="curEdu.entityName"
-                        (focusOut)="
-                          curEdu.entityName = $event; saveData(curEdu)
-                        "
-                      >
-                        {{ curEdu.entityName }}
-                      </app-edit-input>
-                    </h4>
-                  </div>
-
-                  <div class="row mt-0 card-subtitle">
-                    <span class="mt-0">
-                      <app-edit-input
-                        [data]="curEdu.title"
-                        (focusOut)="curEdu.title = $event; saveData(curEdu)"
-                      >
-                        {{ curEdu.title }}
-                      </app-edit-input>
-                    </span>
-                  </div>
+                <div class="row m-0 p-0">
+                  <h4
+                    [contentEditable]="isLogged"
+                    [(contenteditableModel)]="curEdu.entityName"
+                    class="card-title"
+                  >
+                    {{ curEdu.entityName }}
+                  </h4>
+                </div>
+                <div class="row mt-0 card-subtitle">
+                  <span
+                    [contentEditable]="isLogged"
+                    [(contenteditableModel)]="curEdu.title"
+                    class="mt-0"
+                  >
+                    {{ curEdu.title }}
+                  </span>
+                </div>
+                <div class="row px-4">
+                  <p
+                    [contentEditable]="isLogged"
+                    [(contenteditableModel)]="curEdu.details"
+                    class="text-justify text-multiline"
+                  >
+                    {{ curEdu.details }}
+                  </p>
                 </div>
               </div>
-              <div class="col-1 m-0 p-1 g-0">
-                <div
-                  *ngIf="isLogged"
-                  class="nav nav-pills card-header-pills d-flex align-items-center"
-                >
+              <div class="col-1" *ngIf="isLogged">
+                <div class="nav nav-pills card-header-pills m-0 p-0">
                   <div class="btn p-1" (click)="deleteEducation(curEdu.id)">
                     <i class="bi bi-trash3"></i>
                   </div>
                 </div>
+                <div class="nav nav-pills card-header-pills m-0">
+                  <div
+                    class="btn p-1"
+                    (click)="updateEducation(curEdu.id, curEdu)"
+                  >
+                    <i class="bi bi-check2-square"></i>
+                  </div>
+                </div>
+                <div class="nav nav-pills card-header-pills m-0">
+                  <div class="btn p-1" (click)="loadEducation()">
+                    <i class="bi bi-x-square"></i>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="row px-4">
-              <p class="d-flex text-justify text-multiline">
-                <app-edit-input-multiline
-                  [data]="curEdu.details"
-                  (focusOut)="curEdu.details = $event; saveData(curEdu)"
-                >
-                  {{ curEdu.details }}
-                </app-edit-input-multiline>
-              </p>
             </div>
           </div>
         </div>

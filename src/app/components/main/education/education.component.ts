@@ -10,7 +10,8 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EducationComponent implements OnInit {
   cost = 'string';
-  
+  text: string;
+
   saveData(data: Education) {
     this.educationService.update(data.id, data).subscribe(
       (data) => {
@@ -39,6 +40,10 @@ export class EducationComponent implements OnInit {
     this.educationService.list().subscribe((data) => {
       this.education = data;
     });
+  }
+
+  updateEducation(id: number, data: Education) {
+    this.educationService.update(id, data).subscribe();
   }
 
   deleteEducation(id: number) {

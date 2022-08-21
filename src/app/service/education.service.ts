@@ -7,7 +7,6 @@ import { Education } from '../model/education';
   providedIn: 'root',
 })
 export class EducationService {
-  
   EDUCATION_DATA_URL = 'https://still-spire-19033.herokuapp.com/education';
   //Not suported in firebase free
   //EDUCATION_DATA_URL = `${process.env['BACKEND_URL']}/education`;
@@ -28,6 +27,7 @@ export class EducationService {
   }
 
   public update(id: number, data: Education): Observable<any> {
+    console.log('updating: ', this.EDUCATION_DATA_URL + `/update/${id}`, data);
     return this.httpClient.put<any>(
       this.EDUCATION_DATA_URL + `/update/${id}`,
       data

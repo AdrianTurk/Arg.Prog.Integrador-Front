@@ -13,6 +13,14 @@
 .card-footer-text {
   color: #fcfbff;
 }
+.card-subtitle{
+  font-style: italic;
+  font-weight: bold;
+}
+
+.card-title{
+  font-weight: bold;
+}
 
 .title {
   text-align: center;

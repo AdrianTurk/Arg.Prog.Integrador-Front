@@ -14,7 +14,6 @@ import { EducationComponent } from './components/main/education/education.compon
 import { SkillsComponent } from './components/main/skills/skills.component';
 import { ProjectComponent } from './components/main/project/project.component';
 import { EditInputComponent } from './components/main/edit-input/edit-input.component';
-import { AutofocusDirective } from './autofocus.directive';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
@@ -23,8 +22,9 @@ import { interceptorProvider } from './service/token.interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewExperienceComponent } from './components/new-experience/new-experience.component';
 import { FormExperienceComponent } from './components/form-experience/form-experience.component';
-import { FormEducationComponent } from './components/form-education/form-education.component';
 import { NewEducationComponent } from './components/new-education/new-education.component';
+import { EditInputMultilineComponent } from './components/main/edit-input-multiline/edit-input-multiline.component';
+import { ContenteditableModel } from './contenteditable.directive';
 
 @NgModule({
   declarations: [
@@ -37,13 +37,13 @@ import { NewEducationComponent } from './components/new-education/new-education.
     SkillsComponent,
     ProjectComponent,
     EditInputComponent,
-    AutofocusDirective,
     MainComponent,
     LoginComponent,
     NewExperienceComponent,
     FormExperienceComponent,
-    FormEducationComponent,
     NewEducationComponent,
+    EditInputMultilineComponent,
+    ContenteditableModel,
   ],
   imports: [
     BrowserModule,
