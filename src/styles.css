@@ -20,12 +20,14 @@
 
 .card-title{
   font-weight: bold;
+  font-size:x-large;
 }
 
 .title {
   text-align: center;
   font-size: 5vh;
 }
+
 .text-multiline {
   white-space: pre;
 }

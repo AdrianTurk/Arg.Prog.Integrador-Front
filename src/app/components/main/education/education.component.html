@@ -8,18 +8,16 @@
       <div class="col-6 d-flex" *ngFor="let curEdu of education">
         <div class="card d-flex default-bg-color my-4 mx-2 p-0 w-100">
           <div class="card-body details p-0">
-            <div class="row justify-content-between p-2">
+            <div class="row justify-content-between p-2 m-1">
               <div class="col-11 justify-content-between">
-                <div class="row m-0 p-0">
-                  <h4
-                    [contentEditable]="isLogged"
-                    [(contenteditableModel)]="curEdu.entityName"
-                    class="card-title"
-                  >
-                    {{ curEdu.entityName }}
-                  </h4>
+                <div
+                  class="row card-title p-0 m-0"
+                  [contentEditable]="isLogged"
+                  [(contenteditableModel)]="curEdu.entityName"
+                >
+                  {{ curEdu.entityName }}
                 </div>
-                <div class="row mt-0 card-subtitle">
+                <div class="row m-0 p-0 g-0 card-subtitle">
                   <span
                     [contentEditable]="isLogged"
                     [(contenteditableModel)]="curEdu.title"
@@ -28,23 +26,18 @@
                     {{ curEdu.title }}
                   </span>
                 </div>
-                <div class="row px-4">
-                  <p
-                    [contentEditable]="isLogged"
-                    [(contenteditableModel)]="curEdu.details"
-                    class="text-justify text-multiline"
-                  >
-                    {{ curEdu.details }}
-                  </p>
-                </div>
               </div>
-              <div class="col-1" *ngIf="isLogged">
-                <div class="nav nav-pills card-header-pills m-0 p-0">
+              <div class="col-1 p-0" *ngIf="isLogged">
+                <div
+                  class="nav nav-pills card-header-pills m-0 p-0 d-flex justify-content-end"
+                >
                   <div class="btn p-1" (click)="deleteEducation(curEdu.id)">
                     <i class="bi bi-trash3"></i>
                   </div>
                 </div>
-                <div class="nav nav-pills card-header-pills m-0">
+                <div
+                  class="nav nav-pills card-header-pills m-0 d-flex justify-content-end"
+                >
                   <div
                     class="btn p-1"
                     (click)="updateEducation(curEdu.id, curEdu)"
@@ -52,17 +45,28 @@
                     <i class="bi bi-check2-square"></i>
                   </div>
                 </div>
-                <div class="nav nav-pills card-header-pills m-0">
+                <div
+                  class="nav nav-pills card-header-pills m-0 d-flex justify-content-end"
+                >
                   <div class="btn p-1" (click)="loadEducation()">
                     <i class="bi bi-x-square"></i>
                   </div>
+                </div>
+              </div>
+              <div class="row m-0 p-1 ps-5 pt-2">
+                <div
+                  [contentEditable]="isLogged"
+                  [(contenteditableModel)]="curEdu.details"
+                  class="text-multiline"
+                >
+                  {{ curEdu.details }}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-6 d-flex" *ngIf="isLogged">
+      <div class="col-6 d-flex m-0 p-0 g-0" *ngIf="isLogged">
         <div class="card d-flex bg-transparent mt-4 mx-2 p-0 w-100">
           <div class="card-body details p-0">
             <button
