@@ -10,16 +10,13 @@
         <div class="card d-flex mt-4 mx-2 p-0 w-100">
           <div class="row m-0 p-0 g-0">
             <div class="col-3 d-flex">
-              <img
-                class="card-img img-fluid"
-                src="{{curPrj.imgLink}}"
-              />
+              <img class="card-img img-fluid" src="{{ curPrj.imgLink }}" />
             </div>
-            <div class="col-md-8" >
+            <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">{{curPrj.name}}</h5>
+                <h5 class="card-title">{{ curPrj.name }}</h5>
                 <p class="card-text">
-                  {{curPrj.description}}
+                  {{ curPrj.description }}
                 </p>
                 <p class="card-text">
                   <small class="text-muted">Last updated 3 mins ago</small>
@@ -28,6 +25,8 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="col-8">
         <div
           *ngIf="isLogged"
           class="card d-flex bg-transparent mt-4 mx-2 p-0 w-100"
