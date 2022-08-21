@@ -75,12 +75,12 @@
             class="card-footer card-footer-bg m-0 g-0 py-0"
             *ngIf="curExp.recomendations"
           >
+            <h6 class="m-0">Referencias:</h6>
             <div
               class="card-footer-text p-0 m-0 text-multiline"
               [contentEditable]="isLogged"
               [(contenteditableModel)]="curExp.recomendations"
             >
-              <h6>Referencias:</h6>
               {{ curExp.recomendations }}
             </div>
           </div>
