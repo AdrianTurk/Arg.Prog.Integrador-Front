@@ -1,0 +1,13 @@
+<div *ngIf="!editMode" (click)="editMode = true" class="cell">
+  {{ data }}
+</div>
+<input
+  *ngIf="editMode"
+  (focusout)="onFocusOut()"
+  (keydown.enter)="lostFocus($event)"
+  [(ngModel)]="data"
+  class="cellInput"
+  appAutofocus
+  type="string"
+  (focusout)="editMode = false"
+/>

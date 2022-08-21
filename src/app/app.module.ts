@@ -13,6 +13,8 @@ import { ExperienceComponent } from './components/main/experience/experience.com
 import { EducationComponent } from './components/main/education/education.component';
 import { SkillsComponent } from './components/main/skills/skills.component';
 import { ProjectComponent } from './components/main/project/project.component';
+import { EditInputComponent } from './components/main/edit-input/edit-input.component';
+import { AutofocusDirective } from './autofocus.directive';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MainComponent } from './components/main/main.component';
@@ -34,6 +36,8 @@ import { NewEducationComponent } from './components/new-education/new-education.
     EducationComponent,
     SkillsComponent,
     ProjectComponent,
+    EditInputComponent,
+    AutofocusDirective,
     MainComponent,
     LoginComponent,
     NewExperienceComponent,
