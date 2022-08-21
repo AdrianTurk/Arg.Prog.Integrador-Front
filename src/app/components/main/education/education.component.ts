@@ -9,6 +9,19 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./education.component.css'],
 })
 export class EducationComponent implements OnInit {
+  cost = 'string';
+  
+  saveData(data: Education) {
+    this.educationService.update(data.id, data).subscribe(
+      (data) => {
+        console.log('Agregado correctamente', data);
+      },
+      (err) => {
+        console.log('Fallo la actualizacion');
+      }
+    );
+  }
+
   education: Education[] = [];
   isLogged = false;
 
@@ -21,6 +34,7 @@ export class EducationComponent implements OnInit {
     this.loadEducation();
     this.isLogged = this.tokenService.getToken() ? true : false;
   }
+
   loadEducation(): void {
     this.educationService.list().subscribe((data) => {
       this.education = data;
