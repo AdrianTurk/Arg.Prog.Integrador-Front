@@ -53,11 +53,11 @@
                   </div>
                 </div>
               </div>
-              <div class="row m-0 p-1 ps-5 pt-2">
+              <div class="row m-0 p-0 ps-5">
                 <div
                   [contentEditable]="isLogged"
                   [(contenteditableModel)]="curEdu.details"
-                  class="text-multiline"
+                  class="card-text"
                 >
                   {{ curEdu.details }}
                 </div>
@@ -66,8 +66,8 @@
           </div>
         </div>
       </div>
-      <div class="col-6 d-flex m-0 p-0 g-0" *ngIf="isLogged">
-        <div class="card d-flex bg-transparent mt-4 mx-2 p-0 w-100">
+      <div class="col-6 d-flex" *ngIf="isLogged">
+        <div class="card d-flex bg-transparent my-4 mx-2 p-0 w-100">
           <div class="card-body details p-0">
             <button
               type="button"

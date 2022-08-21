@@ -19,8 +19,6 @@ import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/token.interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NewExperienceComponent } from './components/new-experience/new-experience.component';
-import { FormExperienceComponent } from './components/form-experience/form-experience.component';
 import { ContenteditableModel } from './contenteditable.directive';
 
 @NgModule({
@@ -35,8 +33,6 @@ import { ContenteditableModel } from './contenteditable.directive';
     ProjectComponent,
     MainComponent,
     LoginComponent,
-    NewExperienceComponent,
-    FormExperienceComponent,
     ContenteditableModel,
   ],
   imports: [
