@@ -13,14 +13,7 @@ export class EducationComponent implements OnInit {
   text: string;
 
   saveData(data: Education) {
-    this.educationService.update(data.id, data).subscribe(
-      (data) => {
-        console.log('Agregado correctamente', data);
-      },
-      (err) => {
-        console.log('Fallo la actualizacion');
-      }
-    );
+    this.educationService.update(data.id, data).subscribe();
   }
 
   education: Education[] = [];
@@ -43,7 +36,18 @@ export class EducationComponent implements OnInit {
   }
 
   updateEducation(id: number, data: Education) {
-    this.educationService.update(id, data).subscribe();
+    if (id) this.educationService.update(id, data).subscribe();
+    else this.educationService.save(data).subscribe();
+  }
+
+  addEducation() {
+    this.education.push(
+      new Education(
+        'Nombre de la Entidad',
+        'Titulo obtenido',
+        'Detalles de la formación'
+      )
+    );
   }
 
   deleteEducation(id: number) {
