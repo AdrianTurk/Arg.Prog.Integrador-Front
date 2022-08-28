@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Experience } from '../model/experience';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ExperienceService {
-  
-  EXPERIENCE_DATA_URL = 'https://still-spire-19033.herokuapp.com/experience';
+  EXPERIENCE_DATA_URL = environment.backendURL + '/experience';
   //Not suported in firebase free
   //EXPERIENCE_DATA_URL = `${process.env['BACKEND_URL']}/experience`;
 

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  backendURL: 'https://still-spire-19033.herokuapp.com',
 };

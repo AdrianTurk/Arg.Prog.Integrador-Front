@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { environment } from 'src/environments/environment';
 import { Education } from '../model/education';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EducationService {
-  EDUCATION_DATA_URL = 'https://still-spire-19033.herokuapp.com/education';
+  EDUCATION_DATA_URL = environment.backendURL + '/education';
   //Not suported in firebase free
   //EDUCATION_DATA_URL = `${process.env['BACKEND_URL']}/education`;
 

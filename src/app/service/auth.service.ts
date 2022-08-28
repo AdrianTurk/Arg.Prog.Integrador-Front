@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { JwtDTO } from '../model/jwt-dto';
 import { LoginUser } from '../model/login-user';
 import { NewUser } from '../model/new-user';
@@ -9,8 +10,8 @@ import { NewUser } from '../model/new-user';
   providedIn: 'root',
 })
 export class AuthService {
-  AUTH_URL = 'https://still-spire-19033.herokuapp.com/auth'
-  
+  AUTH_URL = environment.backendURL + '/auth';
+
   //No soportado en firebase free:
   //AUTH_URL = `${process.env['BACKEND_URL']}/auth`
 
