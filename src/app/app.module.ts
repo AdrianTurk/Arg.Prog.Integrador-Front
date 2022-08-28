@@ -15,11 +15,12 @@ import { SkillsComponent } from './components/main/skills/skills.component';
 import { ProjectComponent } from './components/main/project/project.component';
 
 import { HttpClientModule } from '@angular/common/http';
+
 import { MainComponent } from './components/main/main.component';
 import { LoginComponent } from './components/login/login.component';
-import { interceptorProvider } from './service/token.interceptor.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContenteditableModel } from './contenteditable.directive';
+import { interceptorProvider } from './service/token.interceptor.service';
 
 @NgModule({
   declarations: [

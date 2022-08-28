@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/internal/Observable';
 import { UserData } from '../model/UserData.model';
 
 @Injectable({
@@ -13,16 +13,15 @@ export class UserDataService {
   //Not suported in firebase free
   //SERVER = `${process.env['BACKEND_URL']}`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
   public getUserData(): Observable<UserData> {
-    return this.http.get<UserData>(this.SERVER + '/user/admin');
+    return this.httpClient.get<UserData>(this.SERVER + '/user/admin');
   }
+
   public update(userName: string, data: UserData): Observable<any> {
     console.log('updating: ', this.SERVER + `/user/update/${userName}`, data);
-    let obs: Observable<any> = new Observable();
-    obs = this.http.put<any>(this.SERVER + `/user/update/${userName}`, data);
-    console.log('Observable: ', obs);
-    return obs;
+
+    return this.httpClient.put<any>(this.SERVER + `/user/update/${userName}`, data);
   }
 }

@@ -28,7 +28,7 @@ export class AboutMeComponent implements OnInit {
 
   public updateAbout() {
     if (this.user.userName) {
-      this.userDataService.update(this.user.userName, this.user);
+      this.userDataService.update(this.user.userName, this.user).subscribe();
     }
   }
 
