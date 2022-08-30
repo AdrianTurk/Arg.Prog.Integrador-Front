@@ -20,7 +20,7 @@ export class EducationComponent implements OnInit {
 
   constructor(
     private educationService: EducationService,
-    public util: UtilityService
+    public utils: UtilityService
   ) {}
 
   ngOnInit(): void {

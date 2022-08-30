@@ -14,16 +14,18 @@
     <div class="col justify-content-center">
       <div
         class="d-inline-flex text-capitalize display-1 pt-2"
-        [contentEditable]="isLogged()"
+        [contentEditable]="utils.isLogged()"
         [(contenteditableModel)]="user.fullName"
+        (click)="utils.selectText($event)"
       >
         {{ user.fullName }}
       </div>
       <div class="col justify-content-center">
         <div
           class="d-inline-flex display-5"
-          [contentEditable]="isLogged()"
+          [contentEditable]="utils.isLogged()"
           [(contenteditableModel)]="user.jobPosition"
+          (click)="utils.selectText($event)"
         >
           {{ user.jobPosition }}
         </div>
@@ -34,15 +36,19 @@
 
     <div
       class="col justify-content-center"
-      [contentEditable]="isLogged()"
+      [contentEditable]="utils.isLogged()"
       [(contenteditableModel)]="user.aboutMe"
+      (click)="utils.selectText($event)"
     >
       <div class="h5 d-inline font-weight-normal">
         {{ user.aboutMe }}
       </div>
     </div>
   </div>
-  <div class="col-1 d-flex justify-content-center align-items-center" *ngIf="isLogged()">
+  <div
+    class="col-1 d-flex justify-content-center align-items-center"
+    *ngIf="utils.isLogged()"
+  >
     <div class="btn p-1" (click)="updateAbout()">
       <i class="bi bi-check default-text-color display-4"></i>
     </div>

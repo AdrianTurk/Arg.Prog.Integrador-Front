@@ -12,24 +12,24 @@
               <div class="col-11 justify-content-between pe-0">
                 <div
                   class="row card-title p-0 m-0"
-                  [contentEditable]="util.isLogged()"
+                  [contentEditable]="utils.isLogged()"
                   [(contenteditableModel)]="curEdu.entityName"
-                  (click)="util.selectText($event)"
+                  (click)="utils.selectText($event)"
                   >
                   {{ curEdu.entityName }}
                 </div>
                 <div class="row m-0 p-0 g-0 card-subtitle">
                   <span
-                    [contentEditable]="util.isLogged()"
+                    [contentEditable]="utils.isLogged()"
                     [(contenteditableModel)]="curEdu.title"
-                    (click)="util.selectText($event)"
+                    (click)="utils.selectText($event)"
                     class="mt-0"
                   >
                     {{ curEdu.title }}
                   </span>
                 </div>
               </div>
-              <div class="col-1 p-0" *ngIf="util.isLogged()">
+              <div class="col-1 p-0" *ngIf="utils.isLogged()">
                 <div
                   class="nav nav-pills card-header-pills m-0 p-0 d-flex justify-content-center"
                 >
@@ -57,9 +57,9 @@
               </div>
               <div class="row m-0 p-0 ps-5">
                 <div
-                  [contentEditable]="util.isLogged()"
+                  [contentEditable]="utils.isLogged()"
                   [(contenteditableModel)]="curEdu.details"
-                  (click)="util.selectText($event)"
+                  (click)="utils.selectText($event)"
                   class="card-text"
                 >
                   {{ curEdu.details }}
@@ -69,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 d-flex" *ngIf="util.isLogged()">
+      <div class="col-6 d-flex" *ngIf="utils.isLogged()">
         <div class="card d-flex bg-transparent my-4 mx-2 p-0 w-100">
           <div class="card-body details p-0">
             <button

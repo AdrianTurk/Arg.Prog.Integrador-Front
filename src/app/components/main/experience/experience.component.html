@@ -11,8 +11,9 @@
               <div class="col-11 justify-content-between pe-0">
                 <div
                   class="row card-title p-0 m-0"
-                  [contentEditable]="isLogged"
+                  [contentEditable]="utils.isLogged()"
                   [(contenteditableModel)]="curExp.companyName"
+                  (click)="utils.selectText($event)"
                 >
                   {{ curExp.companyName }}
                 </div>
@@ -20,25 +21,27 @@
                 <div class="row m-0 p-0 g-0 card-subtitle">
                   <span
                     class="row p-0 m-0"
-                    [contentEditable]="isLogged"
+                    [contentEditable]="utils.isLogged()"
                     [(contenteditableModel)]="curExp.jobPosition"
+                    (click)="utils.selectText($event)"
                   >
                     {{ curExp.jobPosition }}
                   </span>
                   <span
                     class="row p-0 m-0"
-                    [contentEditable]="isLogged"
+                    [contentEditable]="utils.isLogged()"
                     [(contenteditableModel)]="curExp.period"
+                    (click)="utils.selectText($event)"
                   >
                     {{ curExp.period }}
                   </span>
                 </div>
               </div>
-              <div class="col-1 p-0" *ngIf="isLogged">
+              <div class="col-1 p-0" *ngIf="utils.isLogged()">
                 <div
                   class="nav nav-pills card-header-pills m-0 p-0 d-flex justify-content-center"
                 >
-                  <div class="btn p-1" (click)="deleteExperience(curExp.id)">
+                  <div class="btn p-1" (click)="deleteExperience(curExp.id); loadExperience()">
                     <i class="bi bi-trash3"></i>
                   </div>
                 </div>
@@ -62,8 +65,9 @@
               </div>
               <div class="row m-0 p-0 ps-5">
                 <div
-                  [contentEditable]="isLogged"
+                  [contentEditable]="utils.isLogged()"
                   [(contenteditableModel)]="curExp.details"
+                  (click)="utils.selectText($event)"
                   class="card-text"
                 >
                   {{ curExp.details }}
@@ -78,15 +82,16 @@
             <h6 class="m-0">Referencias:</h6>
             <div
               class="card-footer-text p-0 m-0 text-multiline"
-              [contentEditable]="isLogged"
+              [contentEditable]="utils.isLogged()"
               [(contenteditableModel)]="curExp.recomendations"
+              (click)="utils.selectText($event)"
             >
               {{ curExp.recomendations }}
             </div>
           </div>
         </div>
       </div>
-      <div class="col-6 d-flex" *ngIf="isLogged">
+      <div class="col-6 d-flex" *ngIf="utils.isLogged()">
         <div class="card d-flex bg-transparent my-4 mx-2 p-0 w-100">
           <div class="card-body details p-0">
             <button

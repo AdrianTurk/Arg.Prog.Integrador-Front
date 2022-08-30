@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserData } from 'src/app/model/UserData.model';
-import { TokenService } from 'src/app/service/token.service';
 import { UserDataService } from 'src/app/service/userData.service';
+import { UtilityService } from 'src/app/service/utility.service';
 
 @Component({
   selector: 'app-about-me',
@@ -13,7 +13,7 @@ export class AboutMeComponent implements OnInit {
 
   constructor(
     public userDataService: UserDataService,
-    private tokenService: TokenService
+    public utils:UtilityService
   ) {}
 
   ngOnInit(): void {
@@ -22,11 +22,7 @@ export class AboutMeComponent implements OnInit {
     });
   }
 
-  public isLogged(): boolean {
-    return this.tokenService.getToken() ? true : false;
-  }
-
-  public updateAbout() {
+    public updateAbout() {
     if (this.user.userName) {
       this.userDataService.update(this.user.userName, this.user).subscribe();
     }
