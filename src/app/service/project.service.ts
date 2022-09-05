@@ -14,24 +14,27 @@ export class ProjectService {
 
   constructor(private httpClient: HttpClient) {}
   public list(): Observable<Project[]> {
-    return this.httpClient.get<Project[]>(this.PROJECT_DATA_URL + '/list');
+    return this.httpClient.get<Project[]>(`${this.PROJECT_DATA_URL}/list`);
   }
 
   public detail(id: number): Observable<Project> {
     return this.httpClient.get<Project>(
-      this.PROJECT_DATA_URL + `/detail/${id}`
+      `${this.PROJECT_DATA_URL}/detail/${id}`
     );
   }
 
   public save(data: Project): Observable<any> {
-    return this.httpClient.post<any>(this.PROJECT_DATA_URL + '/create', data);
+    return this.httpClient.post<any>(`${this.PROJECT_DATA_URL}/create`, data);
   }
 
   public update(id: number, data: Project): Observable<any> {
-    return this.httpClient.put<any>(this.PROJECT_DATA_URL + `/update`, data);
+    return this.httpClient.put<any>(
+      `${this.PROJECT_DATA_URL}/update/${id}`,
+      data
+    );
   }
 
   public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.PROJECT_DATA_URL + `/delete/${id}`);
+    return this.httpClient.delete<any>(`${this.PROJECT_DATA_URL}/delete/${id}`);
   }
 }
