@@ -45,4 +45,16 @@ export class ProjectComponent implements OnInit {
     if (id) this.projectService.update(id, data).subscribe();
     else this.projectService.save(data).subscribe();
   }
+
+  addProject() {
+    this.projects.push(
+      new Project(
+        'Nombre del Proyecto',
+        'Descripción',
+        'https://images.unsplash.com/photo-1542831371-d531d36971e6',
+        'URL a la Prueba',
+        'URL a la fuente'
+      )
+    );
+  }
 }

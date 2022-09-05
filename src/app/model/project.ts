@@ -7,16 +7,16 @@ export class Project {
   sourceLink: string;
 
   constructor(
+    name: string,
     description: string,
     imgLink: string,
     link: string,
-    name: string,
     sourceLink: string
   ) {
+    this.name = name;
     this.description = description;
     this.imgLink = imgLink;
     this.link = link;
-    this.name = name;
     this.sourceLink = sourceLink;
   }
 }
